@@ -59,6 +59,7 @@ export default function HomeScreen() {
           <Text style={styles.subtitle}>Your Profile</Text>
           <Text style={styles.profileText}>Email: {profile.email}</Text>
           <Text style={styles.profileText}>Username: {profile.username}</Text>
+          <Button title="Clear Storage" onPress={() => { clearStorage(); }} />
         </View>
       ) : (
         <View style={styles.formContainer}>
@@ -78,8 +79,8 @@ export default function HomeScreen() {
             onChangeText={setUsername}
           />
 
-          <Button title="Create Profile" onPress={() => { console.log("Button Pressed!"); saveProfile(); }} />
-          <Button title="Clear Storage" onPress={() => { console.log("Button Pressed!"); clearStorage(); }} />
+          <Button title="Create Profile" onPress={() => { saveProfile(); }} />
+          <Button title="Clear Storage" onPress={() => { clearStorage(); }} />
         </View>
       )}
     </View>
